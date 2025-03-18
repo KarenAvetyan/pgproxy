@@ -1,3 +1,6 @@
+# Define image to use
+ARG IMAGE
+
 # Build stage
 FROM gcc:latest AS builder
 
@@ -9,7 +12,6 @@ WORKDIR /app
 RUN make
 
 # Runtime stage
-ARG IMAGE
 FROM ${IMAGE}
 
 # Copy the pgproxy executable to the container
