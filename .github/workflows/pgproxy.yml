@@ -26,8 +26,8 @@ jobs:
           build-args: IMAGE=ubuntu:latest
           push: true
           tags: |
-            ${{ vars.DOCKER_USERNAME }}/pgproxy:latest
-            ${{ vars.DOCKER_USERNAME }}/pgproxy:ubuntu-latest
+            ${{ vars.DOCKERHUB_USERNAME }}/pgproxy:latest
+            ${{ vars.DOCKERHUB_USERNAME }}/pgproxy:ubuntu-latest
 
       - name: Build and push
         uses: docker/build-push-action@v6
@@ -35,4 +35,4 @@ jobs:
           build-args: IMAGE=alpine:latest
           push: true
           tags: |
-            ${{ vars.DOCKER_USERNAME }}/pgproxy:alpine-latest
+            ${{ vars.DOCKERHUB_USERNAME }}/pgproxy:alpine-latest
