@@ -32,7 +32,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          build-args: IMAGE="alpine:latest"
+          build-args: IMAGE=alpine:latest
           push: true
           tags: |
             ${{ vars.DOCKERHUB_USERNAME }}/pgproxy:alpine-latest
